@@ -1,0 +1,104 @@
+body {
+  background-color: #000000;
+  overflow: hidden; /* Retira o que estiver pra fora do body */
+}
+
+main::after{
+    content: ""; /* Conteudo que vai ter no after */
+    position: fixed; /* A gente informa que quer o elemento fixado na pagina */
+    top: 0; /* Fixa ele no topo da main */
+    left: 0; /* Fixa ele na esquerda da mair */
+    min-height: 100vh; /* Define a atlura minima que o elemento vai ter */
+    width: 80vw; /* Define a largura que o elemento deve ter */
+    
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat; /* Define a cor que terá nosso conteudo que sera inserido apos o after */
+}
+
+/* Escondendo todos os elementos que contem a classe .personagem e que estão dentro da classe main */
+main .personagem {
+  display: none; /* Essa tag=value faz com que o elementeo desapareça */
+  height: 100vh; /* A gente informa que o elementeo tem que ocupar todo o espaçi horizontal */
+}
+
+/* Pegando a imagem do Luffy e selecionando ela como principal */
+main .personagem.selecionado {
+    display: block;  /* Tag=value que informa que um elemento deve aparecer */
+}
+
+main .personagem .imagem {
+    width: 100%; /* A gente informa que a imagem tem que ocupar todo o espaço horizontal que ele tem disponível */
+    height: 100%; /* A gente informa que a imagem tem que ocupar todo o espaço vertical que ele tem disponível */
+    object-fit: cover; /* Ele mantem as dimensoes corretas da imagem e faz com que ela cubra o elemento que ela estã inserida */
+}
+
+.conteudo {
+    position: absolute; /* Destaca o elemento da tag */
+    top: 0; /* Uma das propriedades que são liberadas quando utlizamos position: absolute; */
+    left: 120px; /* Um das outras propriedades liberadas */
+
+    display: flex;
+    flex-direction: column;  /* Porpriedade liberada pelo display: flex, que informa como os elementos serão organizados dentro do dusplay */
+    justify-content: center; /* Propriedade liberada pelo display flex que serve para alinhar os conteúdos */
+    
+    /* Se o elemento não tiver espaço, ele não vai conseguir centralizar */
+    min-height: 100vh; /* Defino que a altura minima que o elemento pode ter, é a altura completa da tela */
+    max-width: 380px; /* Define que largura maxima o meu elemento vai poder ter */
+
+    z-index: 1; /* Propriedade do eixo de profundidade, quanto mais alto o valor, mais "acima" eke fica na página */
+}
+
+.conteudo .nome-personagem {
+    color: #ffffff; /* Muda a cor do texto */
+    font-size: 48px; /* Define o tamanho da fonte */
+    font-family: "Secular One"; /* Muda o estilo da fonte */
+    font-weight: 400; /* Espressura da fonte */
+    margin-bottom: 20px; /* Distancia do bottom entre o nome do personagem e a descrição dele */
+}
+
+.conteudo .descricao{
+    color: #ffffff; /* Muda a cor da fonte */
+    font-family: "Rubik"; /* Define o estilo da fonte */
+    line-height: 24px; /* Altura entre as linhas */
+}
+
+.conteudo .logo {
+    background-image: url("../img/one-piece-logo.png"); /* Carregando a imagem do logo */
+    background-size: cover; /* Informa que a imagem que definimos tem que ocupár todo o espaço que ele tem disponível */
+
+    width: 230px; /* Define uma largura para o logo */
+    height: 100px; /* Define uma altura para o logo */
+
+    margin-bottom: 35px; /* Define a dinstância da logo para o nome do personagem */
+}
+
+.botoes{
+    position: fixed; /* Define que o elemento será fixo */
+    top: 0; /* Coloca o elemento no topo da página */
+    right: 0; /* Coloca o elemento na direita da pagina */
+
+    display: flex;
+    flex-direction: column; /* Porpriedade liberada pelo display: flex, que informa como os elementos serão organizados dentro do dusplay */
+    min-height: 100vh; /* Defino que a altura minima que o elemento pode ter, é a altura completa da tela */
+    width: 180px; /* Define a largura */
+    justify-content: center; /* Propriedade liberada pelo display flex que serve para alinhar os conteúdos. É cosiderao alinhamento vertical */
+    align-items: center; /* Propriedade que alinha os itens na horizontal */
+    gap: 10px; /* Espaçamento entre os botoes */
+
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.botoes .botao {
+    border: none; /* Retira o estilo das bordas que vem por padrão */
+    background: #000000; /* Coloca o fundo preto que vem no background */
+    cursor: pointer; /* Definne o cursor que deverá ficar quando o mouse estiver em cima do botao*/     
+    border-radius: 50%; /* Define a borda para o elemento */
+}
+
+.botoes .botao img {
+    border-radius: 50%; /* Define a borda para o elemento */
+}
+
+.botoes .botao.selecionado{
+    transform: scale(1.2); /* Aumenta o elemento quando ele estiver selecionado */
+    box-shadow: 0 0 10px #d9d9d9; /* Define uma sombra para o elemento */
+}

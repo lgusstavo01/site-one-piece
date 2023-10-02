@@ -1,0 +1,11 @@
+/* Resetando os estilos padrões da página HTML */
+
+*{
+    margin: 0;  /* Espaçamento entre elementos */
+    padding: 0; /* Espaçamento de dentro dos elementos */
+    box-sizing: border-box; 
+}
+
+ul{
+    list-style: none; /* Remove os estilos que vem por padrão nas listas */
+}

@@ -1,0 +1,63 @@
+@media (max-width: 769px) {
+    main::after{
+        /* Modifica  a posicaodo gradiente*/
+        background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0.00) 65%) no-repeat;
+        width: 100vh; /* Define o tamanho que o elemento tem que ficar na horizontal */
+    }
+
+    main .personagem .imagem{
+        height: 50%; /* Define o tamanho da imagem do personagem */
+    }
+
+    .conteudo{
+        justify-content: flex-end; /* Posiciona no final do emelento em que se encontra */ 
+        left: 0; /* Cola o elemento na esquerda */
+        top: -20%; /* Desce em 20% a altura do elemento em relação ao topo */
+        max-width: 100vw; /* Definimos o tamanho maximo que ela pode ocupar */
+        padding: 30px; /* Demos um espaçamento entre os elementos que se encontram dentro de conteudo */
+    }
+
+    .conteudo .nome-personagem{
+        font-size: 36px; /* Modifica o tamanho do nome do personagem */
+    }
+
+    .conteudo .descricao {
+        max-width: 500px; /* Define a largura maxima que o elemento devera ocupar */
+    }
+
+    .botoes {
+        flex-direction: row; /* Define que os elementos agora deverão ser organizados em linha */
+        align-items: flex-end; /* Alinha os itens no final da pagina */
+        width: 100%; /* Define que o elemento deve ocupar toda a largura que ele tem disponivel */
+        padding: 30px; /* Define um espaçamento entre os elementos */
+
+    }
+
+    .botoes .botao img {
+        max-width: 60px; /* Define o tamanho maximo que o botao deve ter */
+    }
+}
+
+@media (max-width: 425px){
+    .conteudo .logo{
+        width: 170px; /* Define a largura fixa do elemento */
+        height: 75px; /* Define a altura fixa do elemento */ 
+    }
+
+    .conteudo {
+        top: -30%; /* Define que o elemento devera ficar um pouco mais para cima */
+    }
+
+    .conteudo .nome-personagem {
+        font-size: 24px; /* Define o tamanho do nome do personagem */
+    }
+
+    .botoes {
+        padding: 20px; /* Define o espacamento entre os botoes */
+        top: -22%; /* Define que o elemento deverá ficar um pouco mais para cima */
+    }
+
+    .botoes .botao img {
+        max-width: 50px; /* Define a largura fixa maxima da imagem do botao */
+    }
+}
